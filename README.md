@@ -23,26 +23,42 @@ Arquitectura distribuida de doble microcontrolador implementada para solventar l
 ---
 
 ## Resultado y Organización
-
 <div align="center">
 <table border="0">
   <tr>
-    <td width="50%" align="center">
-      <h3>##  Vista General</h3>
-      <img src="assets/maquina_arcade.jpg" alt="Máquina Arcade Aladdin Finalizada" width="100%" />
+    <!-- COLUMNA IZQUIERDA: VISTA GENERAL -->
+    <td width="50%" align="center" valign="top">
+      <h3> Vista General</h3>
+      <br>
+      <img src="assets/maquina_arcade.jpg" alt="Máquina Arcade Aladdin Finalizada" width="100%" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);" />
+      <p><i>Máquina Arcade Finalizada y Funcionando</i></p>
     </td>
-    <td width="50%" align="left">
-      <h3>## 📂 Estructura del Repositorio</h3>
-      ```text
-      Arcade-Disney-Aladdin
-       ┣ 📂 assets/              # Imágenes, esquemas y banners para la documentación
-       ┣ 📂 src/
-       ┃ ┣ 📂 esp32_s3_main/     # Código fuente principal (Lógica y motor gráfico TFT_eSPI)
-       ┃ ┗ 📂 esp32_wroom_per/   # Código fuente secundario (Gestión de periféricos por UART)
-       ┣ 📄 .gitignore
-       ┣ 📄 LICENSE              # Licencia restrictiva (Derechos reservados)
-       ┗ 📄 README.md            # Documentación del proyecto
-      ```
+    <!-- COLUMNA DERECHA: ESTRUCTURA DEL REPOSITORIO -->
+    <td width="50%" align="left" valign="top">
+      <h3>Estructura del Repositorio</h3>
+      <br>
+      <!-- Usamos <pre> para forzar el formato de texto preformateado y evitar que se amontone -->
+      <pre style="font-family: 'Courier New', Courier, monospace; font-size: 0.9em; background-color: #161b22; padding: 15px; border-radius: 8px; border: 1px solid #30363d;">
+ Arcade-Disney-Aladdin
+ ┣ 📂 assets/
+ ┃ ┣ # Imágenes, banners y esquemas
+ ┃ ┣ 📄 banner.png
+ ┃ ┗ 📄 maquina_arcade.jpg
+ ┣ 📂 src/
+ ┃ ┣ 📂 esp32_s3_main/
+ ┃ ┃ ┣ # Código principal (TFT_eSPI)
+ ┃ ┃ ┣ 📄 ...
+ ┃ ┗ 📂 esp32_wroom_per/
+ ┃ ┃ ┣ # Código secundario (UART)
+ ┃ ┃ ┣ 📄 ...
+ ┣ 📂 docs/
+ ┃ ┣ # Documentación detallada
+ ┃ ┣ 📄 HARDWARE.md
+ ┃ ┗ 📄 FIRMWARE.md
+ ┣ 📄 .gitignore
+ ┣ 📄 LICENSE
+ ┗ 📄 README.md
+      </pre>
     </td>
   </tr>
 </table>
