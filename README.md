@@ -1,2 +1,65 @@
-# Aladdin-Arcade-JC4827W543
-Recreación de máquina Arcade temática de Disney Aladdin. Desarrollada con ESP32-S3 (módulo JC4827W543) y gráficos personalizados basados en la librería TFT_eSPI con renderizado de imágenes BMP/PNG, complementada con un ESP Wroom 32 externo para la gestión de periféricos, ambos comunicados vía UART.
+<div align="center">
+
+# ARCADE DISNEY ALADDIN 
+
+<img src="assets/banner.png" alt="Banner Arcade Aladdin" width="100%" />
+
+<p align="center">
+  <a href="https://www.espressif.com/"><img src="https://img.shields.io/badge/MCU-ESP32--S3-E7352C?style=for-the-badge&logo=espressif&logoColor=white" alt="ESP32-S3"></a>
+  <a href="https://github.com/Bodmer/TFT_eSPI"><img src="https://img.shields.io/badge/Graphics-TFT__eSPI-FF9900?style=for-the-badge" alt="TFT_eSPI"></a>
+  <a href="https://isocpp.org/"><img src="https://img.shields.io/badge/Language-C++-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white" alt="C++"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-Copyright-red?style=for-the-badge" alt="License"></a>
+</p>
+
+</div>
+
+##  Arquitectura del Sistema
+Arquitectura distribuida de doble microcontrolador implementada para solventar la saturación de I/O (pines) de la unidad principal, delegando el procesamiento de entradas a un nodo secundario sin comprometer la velocidad del bus gráfico.
+
+* **Unidad Principal (ESP32-S3 / JC4827W543):** Responsable de la ejecución del núcleo de la aplicación, el motor gráfico mediante `TFT_eSPI` y el renderizado de la interfaz.
+* **Subsistema Periférico (ESP32 Wroom 32):** Dedicado exclusivamente al control de botoneras, joystick, lector RFID y tira LED mediante IR.
+* **Enlace de Comunicación:** Interconexión síncrona/asíncrona bidireccional mediante bus serie **UART** entre ambos microcontroladores.
+
+---
+
+## Resultado y Organización
+
+<div align="center">
+<table border="0">
+  <tr>
+    <td width="50%" align="center">
+      <h3>##  Vista General</h3>
+      <img src="assets/maquina_arcade.jpg" alt="Máquina Arcade Aladdin Finalizada" width="100%" />
+    </td>
+    <td width="50%" align="left">
+      <h3>## 📂 Estructura del Repositorio</h3>
+      ```text
+      Arcade-Disney-Aladdin
+       ┣ 📂 assets/              # Imágenes, esquemas y banners para la documentación
+       ┣ 📂 src/
+       ┃ ┣ 📂 esp32_s3_main/     # Código fuente principal (Lógica y motor gráfico TFT_eSPI)
+       ┃ ┗ 📂 esp32_wroom_per/   # Código fuente secundario (Gestión de periféricos por UART)
+       ┣ 📄 .gitignore
+       ┣ 📄 LICENSE              # Licencia restrictiva (Derechos reservados)
+       ┗ 📄 README.md            # Documentación del proyecto
+      ```
+    </td>
+  </tr>
+</table>
+</div>
+
+---
+
+##  Documentación
+
+Detalles sobre la construcción, componentes o el código de cada módulo:
+
+*  [Esquema Electrónico y Cableado](docs/HARDWARE.md)
+*  [Manual de Usuario y Flujo de Juego](docs/USER_GUIDE.md)
+*  [Detalles del Firmware y Periféricos](docs/FIRMWARE.md)
+
+---
+
+## 📄 Licencia
+
+Este proyecto está protegido bajo derechos de autor exclusivos. Consulta el archivo [LICENSE](LICENSE) para más información.
