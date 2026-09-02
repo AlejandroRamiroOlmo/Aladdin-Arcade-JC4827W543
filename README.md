@@ -43,7 +43,8 @@ Arquitectura distribuida de doble microcontrolador implementada para solventar l
  ┣ 📂 assets/
  ┃ ┣ # Imágenes, banners y esquemas
  ┃ ┣ 📄 banner.png
- ┃ ┗ 📄 maquina_arcade.jpg
+ ┃ ┣ 📄 maquina_arcade.jpeg
+ ┃ ┗ 📄 diagrama_flujo_arcade.jpeg 
  ┃      
  ┣ 📂 docs/   
  ┣ # Documentación técnica y manuales
