@@ -76,7 +76,7 @@ Arquitectura distribuida de doble microcontrolador implementada para solventar l
 
 <div align="center">
   <!-- Asegúrate de guardar tu imagen exportada de Draw.io con este nombre en la carpeta assets -->
-  <img src="assets/diagrama_flujo.png" alt="Máquina de Estados y Diagrama de Flujo" width="85%" />
+  <img src="assets/diagrama_flujo_arcade.jpeg" alt="Máquina de Estados y Diagrama de Flujo" width="85%" />
 </div>
 
 ---
