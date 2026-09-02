@@ -6,23 +6,23 @@
 
 <p align="center">
   <a href="https://www.espressif.com/"><img src="https://img.shields.io/badge/MCU-ESP32--S3-E7352C?style=for-the-badge&logo=espressif&logoColor=white" alt="ESP32-S3"></a>
-  <a href="https://github.com/Bodmer/TFT_eSPI"><img src="https://img.shields.io/badge/Graphics-TFT__eSPI-FF9900?style=for-the-badge" alt="TFT_eSPI"></a>
+  <a href="https://github.com/moononournation/Arduino_GFX"><img src="https://img.shields.io/badge/Graphics-Arduino%20GFX-FF9900?style=for-the-badge" alt="Arduino GFX"></a>
   <a href="https://isocpp.org/"><img src="https://img.shields.io/badge/Language-C++-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white" alt="C++"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-Copyright-red?style=for-the-badge" alt="License"></a>
 </p>
 
 </div>
 
-##  Arquitectura del Sistema
+## ⚙️ Arquitectura del Sistema
 Arquitectura distribuida de doble microcontrolador implementada para solventar la saturación de I/O (pines) de la unidad principal, delegando el procesamiento de entradas a un nodo secundario sin comprometer la velocidad del bus gráfico.
 
-* **Unidad Principal (ESP32-S3 / JC4827W543):** Responsable de la ejecución del núcleo de la aplicación, el motor gráfico mediante `TFT_eSPI` y el renderizado de la interfaz.
+* **Unidad Principal (ESP32-S3 / JC4827W543):** Responsable de la ejecución del núcleo de la aplicación, el motor gráfico mediante `Arduino GFX` y el renderizado de la interfaz.
 * **Subsistema Periférico (ESP32 Wroom 32):** Dedicado exclusivamente al control de botoneras, joystick, lector RFID y tira LED mediante IR.
 * **Enlace de Comunicación:** Interconexión síncrona/asíncrona bidireccional mediante bus serie **UART** entre ambos microcontroladores.
 
 ---
 
-## Resultado y Organización
+## 🏆 Resultado y Organización
 <div align="center">
 <table border="0">
   <tr>
@@ -44,17 +44,23 @@ Arquitectura distribuida de doble microcontrolador implementada para solventar l
  ┃ ┣ # Imágenes, banners y esquemas
  ┃ ┣ 📄 banner.png
  ┃ ┗ 📄 maquina_arcade.jpg
+ ┃      
+ ┣ 📂 docs/   
+ ┣ # Documentación técnica y manuales
+ ┃ ┣ 📂 datasheets/
+ ┃ ┗ 📂 manuales/
+ ┃      
+ ┣ 📂 fabricación/   
+ ┣ # Esquema eléctrico y planos 
+ ┃ ┣ 📂 electronics/
+ ┃ ┗ 📂 structure/
+ ┃      
  ┣ 📂 src/
  ┃ ┣ 📂 esp32_s3_main/
- ┃ ┃ ┣ # Código principal (TFT_eSPI)
- ┃ ┃ ┣ 📄 ...
+ ┃ ┃ ┣ # Código principal 
  ┃ ┗ 📂 esp32_wroom_per/
- ┃ ┃ ┣ # Código secundario (UART)
- ┃ ┃ ┣ 📄 ...
- ┣ 📂 docs/
- ┃ ┣ # Documentación detallada
- ┃ ┣ 📄 HARDWARE.md
- ┃ ┗ 📄 FIRMWARE.md
+ ┃   ┣ # Código secundario 
+ ┃ 
  ┣ 📄 .gitignore
  ┣ 📄 LICENSE
  ┗ 📄 README.md
@@ -66,13 +72,19 @@ Arquitectura distribuida de doble microcontrolador implementada para solventar l
 
 ---
 
-##  Documentación
+## 🔄 Diagrama de flujo (Máquina de Estados)
 
-Detalles sobre la construcción, componentes o el código de cada módulo:
+<div align="center">
+  <!-- Asegúrate de guardar tu imagen exportada de Draw.io con este nombre en la carpeta assets -->
+  <img src="assets/diagrama_flujo.png" alt="Máquina de Estados y Diagrama de Flujo" width="85%" />
+</div>
 
-*  [Esquema Electrónico y Cableado](docs/HARDWARE.md)
-*  [Manual de Usuario y Flujo de Juego](docs/USER_GUIDE.md)
-*  [Detalles del Firmware y Periféricos](docs/FIRMWARE.md)
+---
+
+## 📚 Documentación
+Enlace a documentación del repositorio
+
+*  [Esquema Electrónico y Cableado](fabricación/electronics/Arcade_Schematic.pdf)
 
 ---
 
